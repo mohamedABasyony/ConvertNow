@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Convert Now</string>
+    <string name="no_network_error_message">There is no Internet connection, Please check your network and try again later</string>
+    <string name="server_down_error_message">Server is down, please try again later</string>
+    <string name="business_error_message">Something wrong happened, please try again later</string>
+    <string name="time_out_error_message">Server cannot be reachable, please try again later</string>
+</resources>
