@@ -1,6 +1,7 @@
 package com.basyony.convertnow.presentation.dashboard
 
 import androidx.lifecycle.MutableLiveData
+import com.basyony.convertnow.domain.errorMapper
 import com.basyony.convertnow.domain.gateways.RatesAPI
 import com.basyony.convertnow.domain.toDashboardUiModel
 import com.basyony.convertnow.entities.*
@@ -22,7 +23,7 @@ class DashboardViewModel (
             .compose { composer(it) }
             .subscribe(
                 { screenData.postValue(Success(it.toDashboardUiModel())) },
-                { it.printStackTrace() }
+                { screenData.postValue(ScreenError(errorMapper(it))) }
             )
             .disposeBy(disposables)
     }
